@@ -117,7 +117,7 @@ export default class HomePage extends React.Component<{}, IState> {
             )
 
         } else {
-            return null
+            return (<div>Failed prediction</div>)
         }
 
     }

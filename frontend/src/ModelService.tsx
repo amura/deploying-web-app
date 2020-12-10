@@ -1,6 +1,7 @@
 import axios from "axios";
 import {InferenceResult, InferencerPrediction} from "./model";
 import * as tf from '@tensorflow/tfjs';
+import mod from "./assets/model_tfjs/model.json"
 
 
 export class ModelService {
@@ -124,7 +125,8 @@ export class ModelService {
 
 
         const predictions: InferencerPrediction[] = [];
-        for (let i = 0; i < classes.length; i++) {
+        //for (let i = 0; i < classes.length; i++) {
+        for(var i in classes){            
             predictions.push({
                 label: classes[i]
                 , confidence: scores[i]
